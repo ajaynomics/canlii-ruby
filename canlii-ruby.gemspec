@@ -9,13 +9,14 @@ Gem::Specification.new do |spec|
   spec.email         = ["50063680+ajaynomics@users.noreply.github.com"]
   spec.summary       = "Ruby client for the CanLII API"
   spec.description   = "A lightweight Ruby client for accessing Canadian legal information via the CanLII API"
-  spec.homepage      = "https://github.com/youraccount/canlii-ruby"
+  spec.homepage      = "https://github.com/ajaynomics/canlii-ruby"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
+  spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files         = Dir["lib/**/*", "README.md", "LICENSE.txt", "CHANGELOG.md"]
   spec.require_paths = ["lib"]
