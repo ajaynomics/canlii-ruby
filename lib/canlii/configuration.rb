@@ -12,7 +12,7 @@ module CanLII
     end
 
     def validate!
-      raise Error, "API key is required" if api_key.blank?
+      raise Error, "API key is required" if api_key.nil? || api_key.to_s.strip.empty?
     end
   end
 end
