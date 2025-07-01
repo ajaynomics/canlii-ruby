@@ -7,8 +7,9 @@ module CanLII
 
     class << self
       def with_client(client = nil)
+        old_client = Thread.current[:canlii_client]
+
         if client
-          old_client = Thread.current[:canlii_client]
           Thread.current[:canlii_client] = client
           yield client
         else
@@ -16,7 +17,7 @@ module CanLII
           yield current_client
         end
       ensure
-        Thread.current[:canlii_client] = old_client if client
+        Thread.current[:canlii_client] = old_client
       end
 
       private

@@ -23,7 +23,7 @@ Or install it yourself as:
 ### Basic Configuration
 
 ```ruby
-require 'canlii-ruby'
+require 'canlii'
 
 CanLII.configure do |config|
   config.api_key = ENV["CANLII_API_KEY"]
