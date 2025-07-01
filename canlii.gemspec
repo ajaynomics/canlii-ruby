@@ -3,7 +3,7 @@
 require_relative "lib/canlii/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "canlii-ruby"
+  spec.name          = "canlii"
   spec.version       = CanLII::VERSION
   spec.authors       = ["Ajay Krishnan"]
   spec.email         = ["50063680+ajaynomics@users.noreply.github.com"]

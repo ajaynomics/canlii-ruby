@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    canlii-ruby (0.1.0)
+    canlii (0.1.0)
       activemodel (>= 6.0)
       activesupport (>= 6.0)
       http (~> 5.0)
@@ -137,7 +137,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  canlii-ruby!
+  canlii!
   minitest (~> 5.16)
   rake (~> 13.0)
   rubocop (~> 1.21)
