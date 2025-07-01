@@ -7,7 +7,7 @@ module CanLII
     def initialize
       @base_url = "https://api.canlii.org/v1"
       @language = "en"
-      @api_key = ENV["CANLII_API_KEY"]
+      @api_key = ENV.fetch("CANLII_API_KEY", nil)
       @logger = Logger.new($stdout)
     end
 
