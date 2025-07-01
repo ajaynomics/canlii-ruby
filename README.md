@@ -2,6 +2,24 @@
 
 A lightweight Ruby client for accessing Canadian legal information via the CanLII API.
 
+## API Access
+
+To use this gem, you'll need a CanLII API key. Request one by filling out the [feedback form](https://www.canlii.org/feedback/feedback.html).
+
+### API Limitations
+
+The CanLII API provides:
+- Access to metadata only (not full document text)
+- 5,000 queries per day
+- 2 requests per second
+- 1 request at a time
+
+### Support
+
+CanLII does not provide user support for the API. Please:
+- Refer to the [CanLII REST API Documentation](https://www.canlii.org/api/docs/)
+- Report API issues via [GitHub](https://github.com/canlii/api_documentation/issues)
+
 ## Installation
 
 Add this line to your application's Gemfile:
