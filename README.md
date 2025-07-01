@@ -28,6 +28,7 @@ require 'canlii'
 CanLII.configure do |config|
   config.api_key = ENV["CANLII_API_KEY"]
   config.logger = Logger.new(STDOUT)
+  config.timeout = 30 # Optional: timeout in seconds (default: 30)
 end
 ```
 
@@ -39,6 +40,7 @@ In `config/initializers/canlii.rb`:
 CanLII.configure do |config|
   config.api_key = ENV["CANLII_API_KEY"]
   config.logger = Rails.logger
+  config.timeout = 30 # Optional: timeout in seconds (default: 30)
 end
 ```
 

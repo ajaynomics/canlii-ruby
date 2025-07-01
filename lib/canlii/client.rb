@@ -5,7 +5,10 @@ module CanLII
     def get(path, params = {})
       params = params.merge(api_key: config.api_key, language: config.language)
 
-      response = HTTP.get(build_url(path), params: params)
+      http_client = HTTP
+      http_client = http_client.timeout(config.timeout) if config.timeout
+
+      response = http_client.get(build_url(path), params: params)
       handle_response(response)
     end
 
@@ -30,6 +33,8 @@ module CanLII
       else
         raise ResponseError, "HTTP #{response.status}: #{response.body}"
       end
+    rescue HTTP::TimeoutError
+      raise TimeoutError, "Request timed out after #{config.timeout} seconds"
     rescue HTTP::Error => e
       raise ConnectionError, "Network error: #{e.message}"
     rescue JSON::ParserError => e

@@ -62,5 +62,19 @@ module CanLII
         @client.get("/broken")
       end
     end
+
+    def test_timeout_configuration_is_applied
+      # Test that timeout is properly configured
+      original_timeout = CanLII.configuration.timeout
+      CanLII.configuration.timeout = 5
+
+      stub_api_request("/test", { success: true })
+
+      # This should complete without timing out
+      result = @client.get("/test")
+      assert_equal({ "success" => true }, result)
+    ensure
+      CanLII.configuration.timeout = original_timeout
+    end
   end
 end
