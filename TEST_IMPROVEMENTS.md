@@ -1,5 +1,14 @@
 # Test Suite Improvements
 
+## Key Insight: Using vs Testing `with_client`
+
+The `with_client` pattern is a core feature of this gem. After review, we found:
+
+1. **Over-testing**: Multiple test files were testing the same `with_client` implementation details (thread safety, restoration, etc.)
+2. **Under-using**: Tests weren't demonstrating how users would actually use the pattern
+
+**Decision**: Keep the existing implementation tests but focus new tests on USING the pattern rather than testing it. The pattern is already well-tested in case_test.rb and database_test.rb.
+
 ## What Was Done
 
 ### 1. Added Test Helper Methods

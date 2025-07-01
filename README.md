@@ -92,6 +92,18 @@ end
 CanLII.configuration.language = "fr"
 ```
 
+### Using Custom Clients (Advanced)
+
+```ruby
+# For testing or using multiple API keys
+mock_client = MyMockClient.new
+
+CanLII::Case.with_client(mock_client) do
+  case_detail = CanLII::Case.find("on", "2024onca1")
+  # This will use mock_client instead of the default HTTP client
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
