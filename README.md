@@ -7,7 +7,7 @@ A lightweight Ruby client for accessing Canadian legal information via the CanLI
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'canlii-ruby'
+gem 'canlii'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install canlii-ruby
+    $ gem install canlii
 
 ## Configuration
 

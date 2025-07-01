@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in canlii-ruby.gemspec
+# Specify your gem's dependencies in canlii.gemspec
 gemspec
 
 gem "rake", "~> 13.0"
